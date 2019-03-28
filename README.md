@@ -1,4 +1,4 @@
-# Stream-Practice
+# First-Practice
 
 Habiendo una clase Persona con sus atributos:
  * nombre
