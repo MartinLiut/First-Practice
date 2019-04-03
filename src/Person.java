@@ -4,11 +4,14 @@ public class Person {
     private String name;
     private int id;
     private int age;
+    private int localID;
+    private static int IDcounter = 1;
 
     public Person(String name, int id, int age) {
         this.name = name;
         this.id = id;
         this.age = age;
+        localID = this.IDcounter++;
     }
 
     public String getName() {
@@ -38,8 +41,9 @@ public class Person {
     @Override
     public String toString() {
         return
-            "Name='" + name + '\n' +
-            "Id=" + id + '\n' +
-            "Age=" + age + '\n';
+            this.localID + ".   " +
+            "Name: " + this.name + "   -   " +
+            "ID: " + this.id + "   -   " +
+            "Age: " + this.age + '\n';
     }
 }
